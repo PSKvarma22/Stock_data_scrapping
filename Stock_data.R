@@ -2,7 +2,7 @@
 #Name: P S K Varma
 #Reg No: 19BDS0093
 #Date: 10-11-2021
-#last edited: 11-11-2021
+#last edited: 16-11-2021
 library(base)
 library(rvest)
 library(dplyr)
@@ -25,10 +25,8 @@ lmn <-cbind(Price,lmn)
 Time1<- as.POSIXct(Sys.time(), "%H:%M:%S")
 mins <- 30*60
 hrs<-5*60*60
-Time<-Time1+mins+hrs
-lmn <-cbind(Time,lmn)
-Date<- format(Sys.Date(), "%d-%m-%Y")
-lmn <-cbind(Date,lmn)
+Date_Time<-Time1+mins+hrs
+lmn <-cbind(Date_Time,lmn)
 Stock_Name<-"Laurus Labs"
 lmn <-cbind(Stock_Name,lmn)
 #Removing first row
